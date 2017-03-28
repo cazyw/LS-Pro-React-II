@@ -97,6 +97,7 @@ export default class Clock extends Component {
           </div>
         </div>
         <div className='panel-body imgContainer'>
+          <img src={pic0} alt='the digit 0' />
           <img src={`pic${this.state.seconds1}`} alt='seconds1' />
         </div>
 
