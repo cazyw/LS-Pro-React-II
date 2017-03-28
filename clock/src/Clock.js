@@ -19,16 +19,15 @@ export default class Clock extends Component {
     super(props);
     this.incrementTime = this.incrementTime.bind(this);
     this.dayInWords = this.dayInWords.bind(this);
-    let superClock = new Date();
     this.state = {
-      clock: superClock,
-      day: superClock.getDay(),
-      hours0: Math.floor((superClock.getHours())/10),
-      minutes0: Math.floor((superClock.getMinutes())/10),
-      seconds0: Math.floor((superClock.getSeconds())/10),
-      hours1: (superClock.getHours())%10,
-      minutes1: (superClock.getMinutes())%10,
-      seconds1: (superClock.getSeconds())%10
+      clock: new Date(),
+      day: (new Date()).getDay(),
+      hours0: 0,
+      minutes0: 0,
+      seconds0: 0,
+      hours1: 0,
+      minutes1: 0,
+      seconds1: 0
     }
   }
 
