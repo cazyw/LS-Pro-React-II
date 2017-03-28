@@ -93,17 +93,10 @@ export default class Clock extends Component {
 
         <div className='panel-heading'>
           <div className='panel-title'>
-            Importing the images at the top - (not working) 
+            Importing the images at the top - (not working)
           </div>
         </div>
         <div className='panel-body imgContainer'>
-          <img src={`pic${this.state.hours0}`} alt='hours0' />
-          <img src={`pic${this.state.hours1}`} alt='hours1' /> 
-          <span className='clockText'>:</span>
-          <img src={`pic${this.state.minutes0}`} alt='minutes0' /> 
-          <img src={`pic${this.state.minutes1}`} alt='minutes1' /> 
-          <span className='clockText'>:</span>
-          <img src={`pic${this.state.seconds0}`} alt='seconds0' />
           <img src={`pic${this.state.seconds1}`} alt='seconds1' />
         </div>
 
