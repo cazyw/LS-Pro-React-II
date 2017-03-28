@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
 import Clock from './Clock';
+import Acknowledgement from './Acknowledgement';
 import logo from './logo.svg';
 import './App.css';
 
@@ -10,6 +11,7 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <Clock />
+        <Acknowledgement />
       </div>
     );
   }

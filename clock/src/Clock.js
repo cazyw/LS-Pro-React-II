@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import './bootstrap-3.3.7-dist/css/bootstrap.min.css';
+import pic0 from './0.png';
+import pic1 from './1.png';
+import pic2 from './2.png';
+import pic3 from './3.png';
+import pic4 from './4.png';
+import pic5 from './5.png';
+import pic6 from './6.png';
+import pic7 from './7.png';
+import pic8 from './8.png';
+import pic9 from './9.png';
 
 
 
@@ -9,14 +19,10 @@ export default class Clock extends Component {
     super(props);
     this.incrementTime = this.incrementTime.bind(this);
     this.dayInWords = this.dayInWords.bind(this);
-    this.incrementTimeState = this.incrementTimeState.bind(this);
     let superClock = new Date();
     this.state = {
       clock: superClock,
       day: superClock.getDay(),
-      hours: superClock.getHours(),
-      minutes: superClock.getMinutes(),
-      seconds: superClock.getSeconds(),
       hours0: Math.floor((superClock.getHours())/10),
       minutes0: Math.floor((superClock.getMinutes())/10),
       seconds0: Math.floor((superClock.getSeconds())/10),
@@ -27,31 +33,29 @@ export default class Clock extends Component {
   }
 
 
+  componentWillMount() {
+    let intervalTimer = setInterval(this.incrementTime, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.intervalTimer);
+  }
+
   incrementTime() {
     this.setState(currentState => {
       return {
         clock: new Date(),
         day: currentState.clock.getDay(),
-        hours: currentState.clock.getHours(),
-        minutes: currentState.clock.getMinutes(),
-        seconds: currentState.clock.getSeconds(),
-        hours0: Math.floor((currentState.clock.getHours())/10),
-        minutes0: Math.floor((currentState.clock.getMinutes())/10),
-        seconds0: Math.floor((currentState.clock.getSeconds())/10),
-        hours1: (currentState.clock.getHours())%10,
-        minutes1: (currentState.clock.getMinutes())%10,
-        seconds1: (currentState.clock.getSeconds())%10
+        hours0: Math.floor((this.state.clock.getHours())/10),
+        minutes0: Math.floor((this.state.clock.getMinutes())/10),
+        seconds0: Math.floor(((new Date()).getSeconds())/10),
+        hours1: (this.state.clock.getHours())%10,
+        minutes1: (this.state.clock.getMinutes())%10,
+        seconds1: ((new Date()).getSeconds())%10
       };
     });
   }
 
-  incrementTimeState() {
-    this.setState(currentState => {
-      return {
-        seconds: currentState.clock.getSeconds()
-      };
-    });
-  }  
 
   dayInWords(numDate){
     let days = {
@@ -69,8 +73,6 @@ export default class Clock extends Component {
   }
 
   render() {
-    setInterval(this.incrementTime, 1000);
-    let bob = 'clockFace2';
     return(
       <div className='panel panel-default'>
         <div className='panel-heading'>
@@ -79,19 +81,36 @@ export default class Clock extends Component {
           </div>
         </div>
         <div className='panel-body imgContainer'>
-          <img src={require('./'+this.state.hours0+'.png')} alt='clock' />
-          <img src={require('./'+this.state.hours1+'.png')} alt='clock' /> 
+          <img src={require('./'+this.state.hours0+'.png')} alt='hours0' />
+          <img src={require('./'+this.state.hours1+'.png')} alt='hours1' /> 
           <span className='clockText'>:</span>
-          <img src={require('./'+this.state.minutes0+'.png')} alt='clock' /> 
-          <img src={require('./'+this.state.minutes1+'.png')} alt='clock' /> 
+          <img src={require('./'+this.state.minutes0+'.png')} alt='minutes0' /> 
+          <img src={require('./'+this.state.minutes1+'.png')} alt='minutes1' /> 
           <span className='clockText'>:</span>
-          <img src={require('./'+this.state.seconds0+'.png')} alt='clock' />
-          <img src={require('./'+this.state.seconds1+'.png')} alt='clock' />
+          <img src={require('./'+this.state.seconds0+'.png')} alt='seconds0' />
+          <img src={require('./'+this.state.seconds1+'.png')} alt='seconds1' />
         </div>
 
         <div className='panel-heading'>
           <div className='panel-title'>
-            Old fashioned way: 
+            Importing the images at the top - (not working) 
+          </div>
+        </div>
+        <div className='panel-body imgContainer'>
+          <img src={`pic${this.state.hours0}`} alt='hours0' />
+          <img src={`pic${this.state.hours1}`} alt='hours1' /> 
+          <span className='clockText'>:</span>
+          <img src={`pic${this.state.minutes0}`} alt='minutes0' /> 
+          <img src={`pic${this.state.minutes1}`} alt='minutes1' /> 
+          <span className='clockText'>:</span>
+          <img src={`pic${this.state.seconds0}`} alt='seconds0' />
+          <img src={`pic${this.state.seconds1}`} alt='seconds1' />
+        </div>
+
+
+        <div className='panel-heading'>
+          <div className='panel-title'>
+            Old fashioned way:
           </div>
         </div>
         <div className='panel-body'>

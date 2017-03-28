@@ -47,3 +47,20 @@ img {
   width: 100px;
   height: 180px;
 }
+
+/* ImageBlock.js */
+
+.imageBlock {
+  margin: 20px;
+}
+
+
+.image300 {
+  width: 500px;
+  height: 300px;
+}
+
+.image100 {
+  width: 100px;
+  height: 100px;
+}
