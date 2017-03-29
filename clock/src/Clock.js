@@ -1,16 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import './bootstrap-3.3.7-dist/css/bootstrap.min.css';
-import pic0 from './0.png';
-import pic1 from './1.png';
-import pic2 from './2.png';
-import pic3 from './3.png';
-import pic4 from './4.png';
-import pic5 from './5.png';
-import pic6 from './6.png';
-import pic7 from './7.png';
-import pic8 from './8.png';
-import pic9 from './9.png';
 
 
 
@@ -89,17 +79,6 @@ export default class Clock extends Component {
           <img src={require('./'+this.state.seconds0+'.png')} alt='seconds0' />
           <img src={require('./'+this.state.seconds1+'.png')} alt='seconds1' />
         </div>
-
-        <div className='panel-heading'>
-          <div className='panel-title'>
-            Importing the images at the top - (not working)
-          </div>
-        </div>
-        <div className='panel-body imgContainer'>
-          <img src={pic0} alt='the digit 0' />
-          <img src={`pic${this.state.seconds1}`} alt='seconds1' />
-        </div>
-
 
         <div className='panel-heading'>
           <div className='panel-title'>
