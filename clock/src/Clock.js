@@ -37,7 +37,7 @@ export default class Clock extends Component {
         minutes0: Math.floor((this.state.clock.getMinutes())/10),
         seconds0: Math.floor(((new Date()).getSeconds())/10),
         hours1: (this.state.clock.getHours())%10,
-        minutes1: ((new Date()).getMinutes())%10,
+        minutes1: (this.state.clock.getMinutes())%10,
         seconds1: ((new Date()).getSeconds())%10
       };
     });
@@ -64,7 +64,6 @@ export default class Clock extends Component {
       <div className='panel panel-default'>
         <div className='panel-heading'>
           <div className='panel-title'>
-            Minutes {this.state.clock.getMinutes()} and {this.state.clock.getMinutes() % 10} 
             The local time is currently ...
           </div>
         </div>
