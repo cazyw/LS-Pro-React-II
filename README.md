@@ -10,4 +10,4 @@ The course has since been discontinued.
 The objective of the lesson was to learn about state, the use of the `Date` object and how to update the state by time increments. 
 We had to display the current time as live. In order to challenge myself I decided to not only display the time in text but also to display it by creating a 'flip clock'. I used images for each digit and changed the image as necessary each second.
 
-
+Currently there's an issue with edge times. For example when the seconds change from 59 to 00, the minute digit card does not also change until the seconds have shifted to 01.
