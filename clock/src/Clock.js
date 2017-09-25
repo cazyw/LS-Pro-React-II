@@ -37,7 +37,7 @@ export default class Clock extends Component {
         minutes0: Math.floor((this.state.clock.getMinutes())/10),
         seconds0: Math.floor(((new Date()).getSeconds())/10),
         hours1: (this.state.clock.getHours())%10,
-        minutes1: (new Date()).getMinutes())%10,
+        minutes1: ((new Date()).getMinutes())%10,
         seconds1: ((new Date()).getSeconds())%10
       };
     });
