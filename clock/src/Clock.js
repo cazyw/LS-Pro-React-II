@@ -64,6 +64,7 @@ export default class Clock extends Component {
       <div className='panel panel-default'>
         <div className='panel-heading'>
           <div className='panel-title'>
+            console.log('{this.state.clock.getMinutes()}')
             The local time is currently 
           </div>
         </div>
