@@ -55,10 +55,10 @@ $ npm start
 
 To build for production
 ```
-$ npm build
+$ npm run build
 ```
 
 To deploy to github pages
 ```
-$ npm deploy
+$ npm run deploy
 ```

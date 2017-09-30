@@ -84,7 +84,7 @@ export default class Clock extends Component {
           </div>
         </div>
         <div className='panel-body'>
-          {this.state.clock.toLocaleTimeString()} <br />
+          {this.state.clock.toLocaleTimeString('en-US')} <br />
           {this.dayInWords(this.state.day)} <br />
         </div>
       </div>
