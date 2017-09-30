@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://cazyw.github.io/LS-Pro-React-II",
   "dependencies": {
-    "react": "^15.4.2",
+    "react": "^15.6.2",
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
@@ -16,6 +16,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy" : "npm run build&&gh-pages -d build"
+    "deploy": "npm run build&&gh-pages -d build"
   }
 }
