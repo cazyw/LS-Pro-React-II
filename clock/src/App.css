@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Pangolin|Architects+Daughter');
+
+body {
+  font-family: 'Pangolin', cursive;
+}
+
 .App {
   text-align: center;
 }
@@ -14,16 +20,8 @@
   color: white;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  to { transform: rotate(360deg); }
-}
-
-
 .LSNavBar {
+  font-family: 'Architects Daughter', cursive;
   background-color: #003b6f;
   height: 100px;
   display: flex;

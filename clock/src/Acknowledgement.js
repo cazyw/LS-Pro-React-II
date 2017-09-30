@@ -7,7 +7,7 @@ export default class Acknowledgement extends Component {
       <div className='acknowledgement'>
       This website was created as part of the LambdaSchool Pro exercise (Lesson 2).
       <br />
-      More information on LambdaSchool can be be found here: <a href='https://lambdaschool.com/pro' target='_blank'>LambdaSchool Pro</a>. 
+      More information on LambdaSchool can be be found here: <a href='https://lambdaschool.com' target='_blank'>LambdaSchool</a>. 
       So far it's been pretty awesome.
       <p>You can check out my Github page by clicking on the OctoCat</p>
       <a href='https://github.com/cazyw' target='_blank'>

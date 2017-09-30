@@ -21,7 +21,7 @@ export default class Clock extends Component {
 
 
   componentDidMount() {
-    let intervalTimer = setInterval(this.incrementTime, 1000);
+    setInterval(this.incrementTime, 1000);
   }
 
   componentDidUnmount() {
